@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI心理咨询师</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI心理咨询师</h1>
+            <p>随时倾听，为您解忧</p>
+        </header>
+
+        <!-- 咨询阶段进度条 -->
+        <div class="counseling-progress">
+            <div class="stage-item active" data-stage="initial">
+                <div class="stage-dot"></div>
+                <span>初始接触</span>
+            </div>
+            <div class="stage-item" data-stage="assessment">
+                <div class="stage-dot"></div>
+                <span>评估阶段</span>
+            </div>
+            <div class="stage-item" data-stage="goal_setting">
+                <div class="stage-dot"></div>
+                <span>目标设定</span>
+            </div>
+            <div class="stage-item" data-stage="intervention">
+                <div class="stage-dot"></div>
+                <span>干预阶段</span>
+            </div>
+            <div class="stage-item" data-stage="closing">
+                <div class="stage-dot"></div>
+                <span>总结阶段</span>
+            </div>
+        </div>
+        
+        <main class="chat-container">
+            <!-- 当前阶段信息 -->
+            <div class="current-stage-info">
+                <h3>当前阶段：<span id="currentStageName">初始接触</span></h3>
+                <p id="currentStageDesc">建立信任关系，了解基本情况</p>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <!-- 消息将在这里动态显示 -->
+            </div>
+            
+            <div class="input-area">
+                <div class="emotion-indicator" id="emotionIndicator">
+                    <span class="emotion-icon">😊</span>
+                    <span class="emotion-text">情绪状态</span>
+                </div>
+                <div class="input-container">
+                    <textarea id="userInput" placeholder="请输入您想说的话..."></textarea>
+                    <button id="voiceInputBtn" class="voice-btn" title="语音输入">
+                        <span class="icon">🎤</span>
+                    </button>
+                </div>
+                <div class="voice-status" id="voiceStatus">
+                    <div class="voice-wave">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p>正在聆听...</p>
+                </div>
+                <div class="button-group">
+                    <button id="sendButton">发送</button>
+                    <button id="exportButton" title="导出聊天记录">
+                        <span class="icon">📥</span>
+                    </button>
+                    <button id="clearButton" title="清除聊天记录">
+                        <span class="icon">🗑️</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- 帮助提示 -->
+        <div class="help-tips">
+            <div class="tip">
+                <span class="icon">💡</span>
+                <span class="text">每个阶段都有特定的目标和重点，系统会根据对话自动调整阶段</span>
+            </div>
+            <div class="tip">
+                <span class="icon">🔒</span>
+                <span class="text">所有对话都是保密的，您可以随时导出或清除聊天记录</span>
+            </div>
+            <div class="tip">
+                <span class="icon">🎤</span>
+                <span class="text">点击麦克风图标开始语音输入，说完后自动识别</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
