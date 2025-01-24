@@ -1,5 +1,5 @@
 const CONFIG = {
-    API_KEY: 'sk-7eeeb89fd2b64611b73cea2c9f7d55de',
+    API_KEY: 'sk-37407b75932947a88b248185c1a71515',
 
     // 咨询阶段定义
     COUNSELING_STAGES: {
